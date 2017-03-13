@@ -1,16 +1,16 @@
 import { Component } from "@angular/core";
-import {  GithubRepos } from '../../providers/github-repos';
+import {  GitHubRepos } from '../../providers/github-repos';
 
 @Component({
     selector: 'page-repos',
     templateUrl: 'repos.html',
-    providers: [GitHubRepos]
+    providers: [ GitHubRepos ]
 })
 export class ReposPage {
     public foundRepos;
     public username;
 
-    constructor(public github: GitHubService) {
+    constructor(private github: GitHubRepos) {
     }
 
     getRepos() {
