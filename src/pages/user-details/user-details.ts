@@ -17,7 +17,6 @@ export class UserDetailsPage {
     this.login = navParams.get('login');
     githubUsers.loadDetails(this.login).subscribe(user => {
     this.user = user;
-    console.log(user)
   })
   }
 }
