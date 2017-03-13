@@ -1,15 +1,25 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component } from "@angular/core";
+import {  GithubRepos } from '../../providers/github-repos';
 
 @Component({
-  selector: 'page-repos',
-  templateUrl: 'repos.html'
+    selector: 'page-repos',
+    templateUrl: 'repos.html',
+    providers: [GitHubRepos]
 })
 export class ReposPage {
+    public foundRepos;
+    public username;
 
-  constructor(public navCtrl: NavController) {}
+    constructor(public github: GitHubService) {
+    }
 
-  ionViewDidLoad() {
-    console.log('Hello Repos Page');
-  }
+    getRepos() {
+        this.github.getRepos(this.username).subscribe(
+            data => {
+                this.foundRepos = data.json();
+            },
+            err => console.error(err),
+            () => console.log('getRepos completed')
+        );
+    }
 }
