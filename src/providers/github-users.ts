@@ -13,8 +13,9 @@ export class GithubUsers {
 
   // Load all github users
   load(): Observable<User[]> {
-  
-  }
+   return this.http.get(`${this.githubApiUrl}/users`)
+     .map(res => <User[]>res.json());
+ }
 
   // Get github user by providing login(username)
   loadDetails(login: string): Observable<User> {
