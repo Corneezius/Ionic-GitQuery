@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-user-details',
   templateUrl: 'user-details.html'
 })
 export class UserDetailsPage {
-  constructor(public navCtrl: NavController) {}
+  login: string;
 
-  ionViewDidLoad() {
-    console.log('Hello UserDetails Page');
+  constructor(public navCtrl: NavController, private navParams: NavParams) {
+    this.login = navParams.get('login');
   }
 }
