@@ -6,7 +6,7 @@ import { StatusBar } from 'ionic-native';
 
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
-import { OrganisationsPage } from '../pages/organizations/organizations';
+import { OrganizationsPage } from '../pages/organizations/organizations';
 
 @Component({
   templateUrl: 'app.html'
