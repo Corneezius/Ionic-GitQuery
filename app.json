@@ -1,0 +1,7 @@
+{
+    "name": "Ionic-Gitquery",
+    "description": "Ionic app that uses Github API to pull data of input github user",
+    "repository": "https://github.com/Corneezius/Ionic-GitQuery",
+    "logo": "https://github.com/Corneezius/Ionic-GitQuery/resources/icon.png",
+    "keywords": ["ionic", "github", "RESTful API"]
+}
